@@ -142,9 +142,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'nigerianfiah@gmail.com'
-EMAIL_HOST_PASSWORD = 'jdnk abxq vqty syyq'  
-DEFAULT_FROM_EMAIL = 'nigerianfiah@gmail.com'
+EMAIL_HOST_USER = '# Use yours',
+EMAIL_HOST_PASSWORD = '# Use yours', 
+DEFAULT_FROM_EMAIL = ' Use yours' ,
 
 CELERY_BROKER_URL = 'redis-19024.c91.us-east-1-3.ec2.redns.redis-cloud.com:19024'  # Still in progress will still connect to redislabs
 
+#Pascal i will add these in production
