@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Attendance Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: right;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Attendance Report</h1>
+        <h2>{{ attendance_link.course.code }} - {{ attendance_link.course.name }}</h2>
+        <p>Generated on: {{ generated_at|date:"F j, Y H:i" }}</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>Name</th>
+                <th>Matric Number</th>
+                <th>Time Submitted</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for response in responses %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ response.name }}</td>
+                <td>{{ response.matric_number }}</td>
+                <td>{{ response.submitted_at|date:"H:i:s" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p>Total Attendance: {{ responses|length }}</p>
+        <p>Link Created by: {{ attendance_link.created_by.username }}</p>
+    </div>
+</body>
+</html>
