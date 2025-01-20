@@ -45,7 +45,7 @@ class TaskViewSet(viewsets.ModelViewSet):
             scheduled_time=task.end_time - timedelta(minutes=5)
         )
 
-tott
+
 
 
 
