@@ -14,6 +14,6 @@ PyPDF2
 youtube-transcript-api
 django
 numpy
-toto
+
 
 
