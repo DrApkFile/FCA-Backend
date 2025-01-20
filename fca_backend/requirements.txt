@@ -17,4 +17,3 @@ numpy
 toto
 boto
 yuyo
-fiaifafu
