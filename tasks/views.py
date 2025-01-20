@@ -44,3 +44,17 @@ class TaskViewSet(viewsets.ModelViewSet):
             notification_type='END',
             scheduled_time=task.end_time - timedelta(minutes=5)
         )
+
+tott
+titwuwa
+auvsiai
+avsiubis
+auius
+augiia
+avuuau
+avuvufai
+avuviua
+auuiai
+
+
+
