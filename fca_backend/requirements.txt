@@ -16,4 +16,4 @@ django
 numpy
 toto
 boto
-yuyo
+
